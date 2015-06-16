@@ -30,6 +30,9 @@
 
 #hideme {display: none;}
 
+
+
+
 </style>
 
 
@@ -73,9 +76,10 @@ function initRotator() {
 
 dw_Event.add( window, 'load', initRotator);
 </script>
+<center><div class="crop">
 
-<center><img class="img" id="r1" src="images/smile.gif" alt=""></center>
-
+<center><img class="img crops" id="r1" src="images/smile.gif" alt=""></center>
+</div></center>
 </head>
 <body>
 <body bgcolor="black">
@@ -121,13 +125,30 @@ function playLooped() {
   var audio=Math.floor(Math.random() * (collection.length));
   audio=collection[audio];
   audio.play();
-  setTimeout(playLooped,audio.duration*700);
+  setTimeout(playLooped,audio.duration*900);
 }
 
 // the songs to be played!
 init([
   'sounds/2015-5-24-21-28-58.mp3',
-  'sounds/2015-5-25-4-12-40.mp3',
-  
+  'sounds/2015-5-24-21-41-33.mp3',
+  'sounds/2015-5-25-4-12-40-2.mp3',
+  'sounds/ss.mp3',
 ]);
 </script>
+
+<script>
+window.onload = function() {
+            var audioEl = document.getElementById("audioTag");
+         
+            audioEl.load();
+            audioEl.play();
+        };
+        </script>
+
+
+<div id="hideme">
+    <audio id="audioTag" loop="loop" autoplay="autoplay" controls> 
+   <source src="sounds/2015-5-24-21-41-33.mp3" />  
+  
+</audio> 

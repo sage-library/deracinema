@@ -88,6 +88,9 @@ dw_Event.add( window, 'load', initRotator);
 
 </body>
 </html>
+
+
+
 <script>
 var collection=[];// final collection of sounds to play
 var loadedIndex=0;// horrible way of forcing a load of audio sounds
@@ -118,13 +121,13 @@ function playLooped() {
   var audio=Math.floor(Math.random() * (collection.length));
   audio=collection[audio];
   audio.play();
-  setTimeout(playLooped,audio.duration*1000);
+  setTimeout(playLooped,audio.duration*700);
 }
 
 // the songs to be played!
 init([
   'sounds/2015-5-24-21-28-58.mp3',
   'sounds/2015-5-25-4-12-40.mp3',
-  'sounds/2015-5-24-21-41-33.mp3'
+  
 ]);
 </script>

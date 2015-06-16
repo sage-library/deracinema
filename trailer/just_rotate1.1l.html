@@ -1,0 +1,137 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="js/jquery.js"></script>
+    <script src="js/webpd-latest.js"></script>
+    <script>
+        var patch
+        $.get('patches/foundry.pd', function(patchStr) {
+          patch = Pd.loadPatch(patchStr)
+          Pd.start()
+        })
+    </script>
+  </head>
+
+  <body></body>
+</html>
+<head>
+<title>Demo</title>
+<link rel="stylesheet" href="css/ex.css" type="text/css">
+<script src="js/dw_event.js" type="text/javascript"></script>
+<script src="js/dw_rotator.js" type="text/javascript"></script>
+
+
+<style>
+.img {
+    max-width: 70%;
+    height: auto;
+}
+
+
+#hideme {display: none;}
+
+</style>
+
+
+
+<script type="text/javascript">
+var rotator1 = {
+    path:   'images/',
+    id:   'r1', // id of image that rotates
+    speed:  50, // default 4500
+    images: ["green 100-28-28.jpeg",	"green 124-52-52.jpeg",	"green 76-4-4.jpeg",
+"green 101-29-29.jpeg",	"green 125-53-53.jpeg",	"green 77-5-5.jpeg",
+"green 102-30-30.jpeg",	"green 126-54-54.jpeg",	"green 78-6-6.jpeg",
+"green 103-31-31.jpeg",	"green 127-55-55.jpeg",	"green 79-7-7.jpeg",
+"green 104-32-32.jpeg",	"green 128-56-56.jpeg",	"green 80-8-8.jpeg",
+"green 105-33-33.jpeg",	"green 129-57-57.jpeg",	"green 81-9-9.jpeg",
+"green 106-34-34.jpeg",	"green 130-58-58.jpeg",	"green 82-10-10.jpeg",
+"green 107-35-35.jpeg",	"green 131-59-59.jpeg", "green 83-11-11.jpeg",
+"green 108-36-36.jpeg",	"green 132-60-60.jpeg",	"green 84-12-12.jpeg",
+"green 109-37-37.jpeg",	"green 133-61-61.jpeg",	"green 85-13-13.jpeg",
+"green 110-38-38.jpeg",	"green 134-62-62.jpeg",	"green 86-14-14.jpeg",
+"green 111-39-39.jpeg",	"green 135-63-63.jpeg",	"green 87-15-15.jpeg",
+"green 112-40-40.jpeg",	"green 136-64-64.jpeg",	"green 88-16-16.jpeg",
+"green 113-41-41.jpeg",	"green 137-65-65.jpeg",	"green 89-17-17.jpeg",
+"green 114-42-42.jpeg",	"green 138-66-66.jpeg",	"green 90-18-18.jpeg",
+"green 115-43-43.jpeg",	"green 139-67-67.jpeg",	"green 91-19-19.jpeg",
+"green 116-44-44.jpeg",	"green 140-68-68.jpeg",	"green 92-20-20.jpeg",
+"green 117-45-45.jpeg",	"green 141-69-69.jpeg",	"green 93-21-21.jpeg",
+"green 118-46-46.jpeg",	"green 142-70-70.jpeg",	"green 94-22-22.jpeg",
+"green 119-47-47.jpeg",	"green 143-71-71.jpeg",	"green 95-23-23.jpeg",
+"green 120-48-48.jpeg",	"green 144-72-72.jpeg",	"green 96-24-24.jpeg",
+"green 121-49-49.jpeg",	"green 73-1-1.jpeg",	"green 97-25-25.jpeg",
+"green 122-50-50.jpeg",	"green 74-2-2.jpeg",	"green 98-26-26.jpeg",
+"green 123-51-51.jpeg",	"green 75-3-3.jpeg",	"green 99-27-27.jpeg",]
+}
+
+// Problems, errors? See http://www.dyn-web.com/tutorials/obj_lit.php#syntax
+
+function initRotator() {
+    dw_Rotator.setup(rotator1);
+}
+
+dw_Event.add( window, 'load', initRotator);
+</script>
+
+<script>
+window.onload = function() {
+            var audioEl = document.getElementById("audioTag");
+         
+            audioEl.load();
+            audioEl.play();
+        };
+        </script>
+
+<script>
+window.onload = function() {
+            var audioEl = document.getElementById("audioTag2");
+         
+            audioEl.load();
+            audioEl.play();
+        };
+        </script>
+
+<script>
+window.onload = function() {
+            var audioEl = document.getElementById("audioTag3");
+         
+            audioEl.load();
+            audioEl.play();
+        };
+        </script>
+
+</head>
+<body>
+<body bgcolor="black">
+
+
+<!-- image that rotates -->
+<center><img class="img" id="r1" src="images/smile.gif" alt=""></center>
+
+<div id="hideme">
+    <audio id="audioTag" loop="loop" autoplay="autoplay" controls> 
+   <source src="sounds/2015-5-24-21-41-33.mp3" />  
+  
+</audio> 
+ 
+  <audio id="audioTag2" loop="loop" autoplay="autoplay" controls> 
+   <source src="sounds/2015-5-25-4-12-40.mp3" />  
+  
+</audio> 
+
+
+</audio> 
+ 
+  <audio id="audioTag3" loop="loop" autoplay="autoplay" controls> 
+   <source src="sounds/2015-5-24-21-28-58.mp3" />  
+  
+</audio> 
+
+
+
+ 
+</div>
+
+</body>
+</html>
